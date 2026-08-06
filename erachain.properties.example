@@ -1,0 +1,6 @@
+chain.id=detalkipro-core
+p2p.port=9046
+rpc.port=9047
+bootstrap.nodes=<BOOTSTRAP_IP>:<BOOTSTRAP_PORT>
+# validator.key.path=./keys/validator1.key
+# validator.pub.path=./keys/validator1.pub

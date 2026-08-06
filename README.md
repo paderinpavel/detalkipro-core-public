@@ -1,0 +1,45 @@
+# Detalkipro CORE — шаблоны ноды
+
+Публичные шаблоны для развёртывания ноды сети CORE проекта **«ДеталькиПро»**.
+
+⚠️ **Важно**: в этом репозитории нет приватных ключей, данных блокчейна и реальных IP‑адресов. Всё секретное хранится локально.
+
+## Статус сети (на момент публикации шаблонов)
+
+- chain_id: `detalkipro-core`
+- node: `detalkipro-fork`
+- height: `0` (сеть стартует)
+- peers: `0` (пока изолирована)
+- is_validator: `true`
+
+## Быстрый старт
+
+1. Клонируй:
+   \`\`\`bash
+   git clone https://github.com/paderinpavel/detalkipro-core-public.git
+   cd detalkipro-core-public
+   \`\`\`
+2. Создай локальный конфиг:
+   \`\`\`bash
+   cp erachain.properties.example erachain.properties
+   \`\`\`
+   Отредактируй `erachain.properties`: подставь реальный IP bootstrap‑ноды и пути к ключам (ключи не коммить!).
+3. Запусти:
+   \`\`\`bash
+   ./start-node1.sh
+   \`\`\`
+4. Проверь статус:
+   \`\`\`bash
+   curl -s -X POST http://localhost:9047/api/status \\
+     -H "Content-Type: application/json" \\
+     -d '{}'
+   \`\`\`
+
+## Для партнёров
+
+Реальные IP‑адреса seed‑нод и доступы выдаются отдельно по запросу. Папка `data` и приватные ключи не передаются через репозиторий.
+
+## Безопасность
+
+- Не коммитьте: `*.key`, `*.pub`, `data/`, `logs/`, `target/`.
+- Все секреты храните локально или в переменных окружения.

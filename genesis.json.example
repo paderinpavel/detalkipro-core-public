@@ -1,0 +1,11 @@
+{
+  "chain_id": "detalkipro-core",
+  "height": 0,
+  "genesis_time": "2026-08-06T12:00:00Z",
+  "accounts": [
+    {
+      "address": "CORE_PUBLIC_ADDRESS_1",
+      "balance": 1000000
+    }
+  ]
+}
